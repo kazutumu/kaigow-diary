@@ -2,8 +2,8 @@ title: 介護福祉士の日記w
 description: うつ病と付き合いながら介護職として生きる、日常と好奇心の個人ブログです。
 lang: ja
 timezone: Asia/Tokyo
-url: ""
-baseurl: ""
+url: "https://kazutumu.github.io"
+baseurl: "/kaigow-diary"
 permalink: /diary/:year/:month/:day/:title/
 future: false
 
