@@ -1,0 +1,20 @@
+---
+layout: page
+title: 月別の日記
+kicker: Archive
+permalink: /archive/
+---
+
+{% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y年%m月'" %}
+<div class="archive-index">
+  {% for yearMonth in postsByYearMonth %}
+    <section class="archive-group">
+      <h2>{{ yearMonth.name }}</h2>
+      <ol class="archive-list">
+        {% for post in yearMonth.items %}
+          <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%d' }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endfor %}
+</div>

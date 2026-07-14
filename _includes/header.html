@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="site-header__inner wrap">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} トップページ">
+      <span class="site-brand__mark" aria-hidden="true">w</span>
+      <span>{{ site.title }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
+      <a href="{{ '/' | relative_url }}">新着</a>
+      <a href="{{ '/categories/' | relative_url }}">カテゴリ</a>
+      <a href="{{ '/years/' | relative_url }}">年別</a>
+      <a href="{{ '/archive/' | relative_url }}">月別</a>
+      <a href="{{ '/search/' | relative_url }}">検索</a>
+      <a href="{{ '/about/' | relative_url }}">このサイトについて</a>
+    </nav>
+  </div>
+</header>

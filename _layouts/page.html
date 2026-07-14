@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="page-shell wrap">
+  <header class="page-header">
+    <p>{{ page.kicker | default: 'Journal' }}</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</div>
+

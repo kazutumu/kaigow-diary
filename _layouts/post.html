@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<article class="post-shell">
+  <header class="post-hero wrap">
+    <div class="post-hero__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y年%-m月%-d日' }}</time>
+      {% for category in page.categories %}
+        <a href="{{ '/categories/#' | append: category | relative_url }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}<p>{{ page.excerpt | strip_html }}</p>{% endif %}
+  </header>
+
+  <div class="post-body prose wrap">
+    {{ content }}
+  </div>
+
+  {% assign saved_comments = site.data.comments[page.seesaa_id] %}
+  {% if saved_comments %}
+    <section class="legacy-comments wrap" aria-labelledby="comments-heading">
+      <h2 id="comments-heading">この日記に寄せられたコメント</h2>
+      <ol>
+        {% for comment in saved_comments %}
+          <li>
+            <header><strong>{{ comment.author | escape }}</strong><time>{{ comment.date | escape }}</time></header>
+            <p>{{ comment.body | escape | newline_to_br }}</p>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+
+  <nav class="post-nav wrap" aria-label="前後の記事">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}"><span>前の日記</span><strong>← {{ page.previous.title }}</strong></a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}"><span>次の日記</span><strong>{{ page.next.title }} →</strong></a>
+    {% endif %}
+  </nav>
+</article>

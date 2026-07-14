@@ -1,0 +1,26 @@
+---
+layout: page
+title: カテゴリから探す
+kicker: Categories
+permalink: /categories/
+---
+
+<div class="topic-index">
+  {% for category in site.data.category_counts %}
+    {% assign category_posts = site.categories[category.name] %}
+    <details id="category-{{ forloop.index }}" class="topic-group">
+      <summary>
+        <span>{{ category.name }}</span>
+        <b>{{ category.count }}件</b>
+      </summary>
+      <ol class="archive-list topic-group__posts">
+        {% for post in category_posts %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+    </details>
+  {% endfor %}
+</div>

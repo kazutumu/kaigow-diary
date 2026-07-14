@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p><strong>{{ site.title }}</strong><br><span>{{ site.description }}</span></p>
+    <div class="site-footer__links">
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a href="{{ '/archive/' | relative_url }}">全記事</a>
+      <a href="{{ '/about/' | relative_url }}">このサイトについて</a>
+    </div>
+    <p class="site-footer__copy">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+  </div>
+</footer>
+

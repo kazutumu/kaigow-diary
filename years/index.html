@@ -1,0 +1,34 @@
+---
+layout: page
+title: 年から探す
+kicker: Yearly archive
+permalink: /years/
+---
+
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+<div class="year-index">
+  {% for year in posts_by_year %}
+    <details id="year-{{ year.name }}" class="year-group">
+      <summary>
+        <span>{{ year.name }}年</span>
+        <b>{{ year.items.size }}件</b>
+      </summary>
+      <div class="year-group__months">
+        {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%Y年%-m月'" %}
+        {% for month in posts_by_month %}
+          <section class="month-group">
+            <h2>{{ month.name }} <span>{{ month.items.size }}件</span></h2>
+            <ol class="archive-list">
+              {% for post in month.items %}
+                <li>
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%m.%d' }}</time>
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </li>
+              {% endfor %}
+            </ol>
+          </section>
+        {% endfor %}
+      </div>
+    </details>
+  {% endfor %}
+</div>
