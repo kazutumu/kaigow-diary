@@ -4,3 +4,4 @@ _site/
 .bundle/
 vendor/
 private-backup/
+_posts/* 2.md
