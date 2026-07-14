@@ -6,7 +6,9 @@
       <a href="{{ '/archive/' | relative_url }}">全記事</a>
       <a href="{{ '/about/' | relative_url }}">このサイトについて</a>
     </div>
-    <p class="site-footer__copy">&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+    <p class="site-footer__copy">
+      &copy; {{ 'now' | date: '%Y' }} {{ site.title }}
+      <a class="forest-door" href="{{ '/mori-visitors/' | relative_url }}" aria-label="森への来訪者">🌲</a>
+    </p>
   </div>
 </footer>
-
