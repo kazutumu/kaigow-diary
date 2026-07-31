@@ -25,7 +25,15 @@ layout: default
             <div class="post-card__meta">
               <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%-m月%-d日' }}</time>
               {% for category in post.categories %}
-                <a href="{{ '/categories/#' | append: category | relative_url }}">{{ category }}</a>
+                {% assign category_index = nil %}
+                {% for listed_category in site.data.category_counts %}
+                  {% if listed_category.name == category %}{% assign category_index = forloop.index %}{% endif %}
+                {% endfor %}
+                {% if category_index %}
+                  <a href="{{ '/categories/#category-' | append: category_index | relative_url }}">{{ category }}</a>
+                {% else %}
+                  <a href="{{ '/categories/' | relative_url }}">{{ category }}</a>
+                {% endif %}
               {% endfor %}
             </div>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>

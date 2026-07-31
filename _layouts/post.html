@@ -7,11 +7,19 @@ layout: default
     <div class="post-hero__meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y年%-m月%-d日' }}</time>
       {% for category in page.categories %}
-        <a href="{{ '/categories/#' | append: category | relative_url }}">{{ category }}</a>
+        {% assign category_index = nil %}
+        {% for listed_category in site.data.category_counts %}
+          {% if listed_category.name == category %}{% assign category_index = forloop.index %}{% endif %}
+        {% endfor %}
+        {% if category_index %}
+          <a href="{{ '/categories/#category-' | append: category_index | relative_url }}">{{ category }}</a>
+        {% else %}
+          <a href="{{ '/categories/' | relative_url }}">{{ category }}</a>
+        {% endif %}
       {% endfor %}
     </div>
     <h1>{{ page.title }}</h1>
-    {% if page.excerpt %}<p>{{ page.excerpt | strip_html }}</p>{% endif %}
+    {% if page.excerpt and page.show_excerpt != false %}<p>{{ page.excerpt | strip_html }}</p>{% endif %}
   </header>
 
   <div class="post-body prose wrap">
