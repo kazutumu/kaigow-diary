@@ -1,7 +1,7 @@
 ---
 title: 'How Far Can Conversation Lower Psychological Barriers?'
 date: 2026-08-03 06:33:14 +0900
-categories: ["AI / ChatGPT / Human-AI Collaboration"]
+categories: ["AI / ChatGPT"]
 lang: en
 excerpt: "A simulation of how playful conversation turned an imagined overseas invitation from one large fear into a sequence of manageable tasks."
 show_excerpt: false

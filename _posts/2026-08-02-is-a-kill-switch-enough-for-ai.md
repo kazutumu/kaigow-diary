@@ -1,7 +1,7 @@
 ---
 title: 'Is a “Kill Switch” Enough for AI?'
 date: 2026-08-02 11:28:14 +0900
-categories: ["AI / ChatGPT / Human-AI Collaboration"]
+categories: ["AI / ChatGPT"]
 lang: en
 excerpt: "A preliminary study of continuous-braking AI operations and graduated shutdown design at Mori Research Lab"
 show_excerpt: false
