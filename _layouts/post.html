@@ -26,6 +26,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% include mina-series-card.html placement="post" %}
+
   {% assign saved_comments = site.data.comments[page.seesaa_id] %}
   {% if saved_comments %}
     <section class="legacy-comments wrap" aria-labelledby="comments-heading">
