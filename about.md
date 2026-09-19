@@ -18,3 +18,9 @@ permalink: /about/
 ## この場所を残すために
 
 2010年にファンブログで書き始め、その後Seesaaブログへ移って公開してきた記事を、Markdownという文章ファイルへ移し、GitHub Pagesでも読めるようにしています。ひとつのブログサービスだけに原稿を預けず、長く読み返せる形で残すための試みです。
+
+## お問い合わせ
+
+ブログへのご感想・お問い合わせはこちらへどうぞ。
+
+[diets-tweed4t@icloud.com](mailto:diets-tweed4t@icloud.com)
