@@ -368,3 +368,12 @@ img { max-width: 100%; }
   .mina-series-promo__link { transition: none; }
   .mina-series-promo__link:hover { transform: none; }
 }
+
+/* All-page blog search */
+.blog-search { padding-block: 0 16px; }
+.blog-search label { display: block; margin-bottom: 5px; font-size: 13px; color: var(--muted); }
+.blog-search__control { display: flex; max-width: 460px; border: 1px solid var(--line); border-radius: 28px; background: white; padding: 4px; gap: 4px; }
+.blog-search__control input { flex: 1; min-width: 0; width: 100%; border: 0; border-radius: 24px; padding: 8px 12px; font: inherit; font-size: 16px; background: transparent; color: var(--ink); }
+.blog-search__control button { flex-shrink: 0; min-height: 44px; padding: 8px 20px; border: 0; border-radius: 24px; background: var(--green); color: white; font: inherit; cursor: pointer; }
+.blog-search__control button:hover { background: var(--green-dark); }
+.blog-search__control input:focus-visible, .blog-search__control button:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }

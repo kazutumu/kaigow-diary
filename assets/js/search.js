@@ -37,6 +37,11 @@ if (input && clearButton && status && results && dataElement) {
     `).join('');
   };
 
+  input.value = new URLSearchParams(window.location.search).get('q') || '';
+  const headerInput = document.querySelector('#blog-search-query');
+  if (headerInput) headerInput.value = input.value;
+  render();
+
   input.addEventListener('input', render);
   clearButton.addEventListener('click', () => {
     input.value = '';

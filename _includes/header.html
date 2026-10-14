@@ -16,4 +16,11 @@
       <a href="{{ '/about/' | relative_url }}">このサイトについて</a>
     </nav>
   </div>
+  <form class="blog-search wrap" role="search" action="{{ '/search/' | relative_url }}" method="get">
+    <label for="blog-search-query">ブログ内検索</label>
+    <div class="blog-search__control">
+      <input id="blog-search-query" name="q" type="search" placeholder="ブログ内検索" aria-label="ブログ内の検索キーワード" required>
+      <button type="submit">検索</button>
+    </div>
+  </form>
 </header>
