@@ -27,7 +27,7 @@ layout: default
               {% for category in post.categories %}
                 {% assign category_index = nil %}
                 {% for listed_category in site.data.category_counts %}
-                  {% if listed_category.name == category %}{% assign category_index = forloop.index %}{% endif %}
+                  {% if listed_category.name == category %}{% assign category_index = listed_category.id | default: forloop.index %}{% endif %}
                 {% endfor %}
                 {% if category_index %}
                   <a href="{{ '/categories/#category-' | append: category_index | relative_url }}">{{ category }}</a>
@@ -69,7 +69,7 @@ layout: default
         <h2>カテゴリ</h2>
         <ul>
           {% for category in site.data.category_counts limit: 10 %}
-            <li><a href="{{ '/categories/#category-' | append: forloop.index | relative_url }}"><span>{{ category.name }}</span><b>{{ category.count }}</b></a></li>
+            <li><a href="{{ '/categories/#category-' | append: category.id | relative_url }}"><span>{{ category.name }}</span><b>{{ category.count }}</b></a></li>
           {% endfor %}
         </ul>
         <a class="text-link category-more" href="{{ '/categories/' | relative_url }}">すべてのカテゴリ <span aria-hidden="true">→</span></a>

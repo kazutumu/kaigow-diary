@@ -9,7 +9,7 @@ layout: default
       {% for category in page.categories %}
         {% assign category_index = nil %}
         {% for listed_category in site.data.category_counts %}
-          {% if listed_category.name == category %}{% assign category_index = forloop.index %}{% endif %}
+          {% if listed_category.name == category %}{% assign category_index = listed_category.id | default: forloop.index %}{% endif %}
         {% endfor %}
         {% if category_index %}
           <a href="{{ '/categories/#category-' | append: category_index | relative_url }}">{{ category }}</a>

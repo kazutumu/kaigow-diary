@@ -8,7 +8,7 @@ permalink: /categories/
 <div class="topic-index">
   {% for category in site.data.category_counts %}
     {% assign category_posts = site.categories[category.name] %}
-    <details id="category-{{ forloop.index }}" class="topic-group">
+    <details id="category-{{ category.id | default: forloop.index }}" class="topic-group">
       <summary>
         <span>{{ category.name }}</span>
         <b>{{ category.count }}件</b>
