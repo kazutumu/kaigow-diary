@@ -40,7 +40,7 @@ AIというと色々な種類がありますが、私のオススメはChatGPT�
 
 ちなみに私が作成したしょぼいゲームのアドレス貼って置きます。。。💦
 
-https://mori-lab-games.kazutumu0.chatgpt.site
+<https://mori-lab-games.kazutumu0.chatgpt.site>
 
 重いゲームもあるのでスマホが熱くなったらやめてくださいねw
 
@@ -48,13 +48,13 @@ https://mori-lab-games.kazutumu0.chatgpt.site
 
 200冊くらいあると思うので適当に見てくださいw
 
-https://kazutumu.github.io/mina-series-site/
+<https://kazutumu.github.io/mina-series-site/>
 
 この絵本はAI初期からの制作物なので絵本の最初は画像のブレ、例えばキャラクターの顔等の違いがありましたが、現在ではブレはほとんどありませんw
 
 私の所属する森研究所のサイトは↓です。。w
 
-https://kazutumu.github.io/mori-lab-site/
+<https://kazutumu.github.io/mori-lab-site/>
 
 アプリも🍎用ですが興味があれば↑で見てみてくださいw
 
