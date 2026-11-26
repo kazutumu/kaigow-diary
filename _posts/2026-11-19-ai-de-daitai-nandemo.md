@@ -40,7 +40,7 @@ AIというと色々な種類がありますが、私のオススメはChatGPT�
 
 ちなみに私が作成したしょぼいゲームのアドレス貼って置きます。。。💦
 
-<https://mori-lab-games.kazutumu0.chatgpt.site>
+[https://mori-lab-games.kazutumu0.chatgpt.site](https://kazutumu.github.io/mori-lab-games/)
 
 重いゲームもあるのでスマホが熱くなったらやめてくださいねw
 

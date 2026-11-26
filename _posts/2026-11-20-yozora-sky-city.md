@@ -22,7 +22,7 @@ AIと一緒に作った空中の街。
 
 「星を渡る街。」
 
-<https://mori-lab-games.kazutumu0.chatgpt.site/sky-city>
+[https://mori-lab-games.kazutumu0.chatgpt.site/sky-city](https://kazutumu.github.io/mori-lab-games/sky-city/)
 
 無料で自由に散歩出来ますので、お暇な方はどうぞ😊
 
